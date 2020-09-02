@@ -1,0 +1,13 @@
+- config:
+    name: "employee"
+    base_url: "https://backoffice-api.test16.shub.us"
+
+- test:
+    name: "get employee"
+    request:
+      url: "/employees"
+      method: GET
+      headers:
+        Authorization: Basic dWlhdXRvbWF0aW9uOmQ0YjkxMWJiMGE4MjQ0NDU5YzcxMmNjNjEzNTQ4ZjMz
+    validate:
+      - eq: ["status_code",200]
